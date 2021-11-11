@@ -8,10 +8,12 @@
 
     android:background="@color/offRed">
 
+    <!--
     #TODO white rounded edge shape
 
     #TODO drop shadow on almost everything
     #also how do I change the font?
+    -->
 
     <TextView
         android:id="@+id/AppName"
@@ -30,12 +32,16 @@
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:srcCompat="@drawable/wisconsin_badgers_2_logo_png_transparent"
+        app:srcCompat="@drawable/home"
         app:layout_constraintTop_toBottomOf="@+id/AppName"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias=".15"/>
+        <!--
+        app:srcCompat="@drawable/wisconsin_badgers_2_logo_png_transparent"
+        -->
+
 
     <TextView
         android:id="@+id/Welcome"

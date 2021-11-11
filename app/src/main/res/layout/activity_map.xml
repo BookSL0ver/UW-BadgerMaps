@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".MapActivity">
 
+    <!--
     #TODO menu at top left
+    -->
 
     <fragment
         android:id="@+id/fragmentMap"
@@ -19,11 +21,34 @@
     <Button
         android:id="@+id/filters"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:background="@color/offRed"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintHorizontal_bias="0"
+        android:onClick="filters"
+        />
 
     <Button
         android:id="@+id/search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="Search"
+        android:textColor="@color/lightGray"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="@+id/filters"
+        app:layout_constraintBottom_toBottomOf="@+id/filters"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/filters"
+        app:layout_constraintHorizontal_bias=".1"
+        android:onClick="search"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

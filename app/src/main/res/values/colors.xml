@@ -11,4 +11,5 @@
     <color name="offRed">#D75959</color>
     <color name="buttonGray">#666464</color>
     <color name="clear">#00FFFFFF</color>
+    <color name="lightGray">#888686</color>
 </resources>
