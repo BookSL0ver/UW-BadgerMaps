@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity"
+    android:background="@color/offRed">
+
+    #TODO white curved edges
+    #TODO image
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias=".03"
+        app:layout_constraintHorizontal_bias=".03"
+        android:onClick="backButton"/>
+
+    <TextView
+        android:id="@+id/signInText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"/>
+
+    <TextView
+        android:id="@+id/wiscText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please sign up using your wisc email"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/signInText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias=".1"/>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="490dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Email"
+        app:layout_constraintTop_toBottomOf="@+id/wiscText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias=".3"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="490dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias=".15"/>
+
+    #TODO image
+    <Button
+        android:id="@+id/eye"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        app:layout_constraintRight_toRightOf="@+id/password"
+        app:layout_constraintBottom_toBottomOf="@+id/password"
+        app:layout_constraintLeft_toLeftOf="@+id/password"
+        app:layout_constraintTop_toTopOf="@+id/password"
+        app:layout_constraintHorizontal_bias="1"
+        android:onClick="seePassword"/>
+
+    <EditText
+        android:id="@+id/passwordConfirm"
+        android:layout_width="490dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Re-Enter Password"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias=".45"/>
+
+    #TODO image
+    <Button
+        android:id="@+id/eye2"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        app:layout_constraintRight_toRightOf="@+id/passwordConfirm"
+        app:layout_constraintBottom_toBottomOf="@+id/passwordConfirm"
+        app:layout_constraintLeft_toLeftOf="@+id/passwordConfirm"
+        app:layout_constraintTop_toTopOf="@+id/passwordConfirm"
+        app:layout_constraintHorizontal_bias="1"
+        android:onClick="seePasswordConfirm"/>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIGN UP"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:background="@color/buttonGray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintVertical_bias=".75"
+        android:onClick="loginClick"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
