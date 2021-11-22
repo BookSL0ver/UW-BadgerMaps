@@ -14,6 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UWBadgerMaps">
         <activity
+            android:name=".Favorites"
+            android:exported="false" />
+        <activity
+            android:name=".Password"
+            android:exported="false" />
+        <activity
+            android:name=".Account"
+            android:exported="false" />
+        <activity
+            android:name=".Settings"
+            android:exported="false" />
+        <activity
             android:name=".Resources"
             android:exported="false" />
         <activity
