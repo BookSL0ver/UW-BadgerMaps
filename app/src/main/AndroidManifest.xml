@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UWBadgerMaps">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".Favorites"
             android:exported="false" />
         <activity
@@ -30,7 +33,8 @@
             android:exported="false" />
         <activity
             android:name=".MapActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Widget.AppCompat.ActionBar" />
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />
@@ -38,7 +42,7 @@
             android:name=".SignInActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

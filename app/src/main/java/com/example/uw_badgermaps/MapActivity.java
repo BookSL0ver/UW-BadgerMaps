@@ -13,6 +13,7 @@ import android.view.View;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -23,6 +24,8 @@ public class MapActivity extends FragmentActivity {
     private FusedLocationProviderClient mFusedLocationProviderClient;
     private LatLng mLocationLatLng;
     private GoogleMap mMap;
+    //set to campus area for map zoom
+    private final LatLng mDestinationLatLng = new LatLng(43.0720, -89.4076);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,8 @@ public class MapActivity extends FragmentActivity {
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         mapFragment.getMapAsync(googleMap -> {
             mMap = googleMap;
+            //zoom into campus
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mDestinationLatLng,17));
             displayMyLocation();
         });
     }
