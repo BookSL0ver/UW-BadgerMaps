@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
 
-    android:background="@color/offRed">
+    android:background="@color/red">
 
     <!--
     #TODO white rounded edge shape
@@ -56,12 +56,13 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias=".25"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/SignInButton"
+        app:cornerRadius="32dp"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:text="Sign In"
-        android:background="@color/buttonGray"
+        android:backgroundTint="@color/buttonGray"
         android:textSize="20dp"
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/Welcome"
@@ -71,14 +72,15 @@
         app:layout_constraintVertical_bias=".2"
         android:onClick="signInClick"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/SignUpButton"
+        app:cornerRadius="32dp"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:text="Sign Up"
         android:textColor="@color/white"
         android:textSize="20dp"
-        android:background="@color/buttonGray"
+        android:backgroundTint="@color/buttonGray"
         app:layout_constraintTop_toBottomOf="@+id/SignInButton"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -86,14 +88,15 @@
         app:layout_constraintVertical_bias=".2"
         android:onClick="signUpClick"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/GuestButton"
+        app:cornerRadius="32dp"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="Continue without account"
         android:textColor="@color/buttonGray"
         android:textSize="10dp"
-        android:background="@color/clear"
+        android:backgroundTint="@color/clear"
         app:layout_constraintTop_toBottomOf="@+id/SignUpButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Account"
-    android:background="@color/offRed">
+    android:background="@color/red">
 
     <!--TODO menu-->
     <TextView
@@ -50,14 +50,15 @@
         app:layout_constraintHorizontal_bias=".2"
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/favorites"
+        app:cornerRadius="32dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Favorites"
         android:textSize="30dp"
         android:textColor="@color/white"
-        android:background="@color/buttonGray"
+        android:backgroundTint="@color/buttonGray"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -65,14 +66,15 @@
         app:layout_constraintVertical_bias=".5"
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/importSchedule"
+        app:cornerRadius="32dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Import Schedule"
         android:textSize="25dp"
         android:textColor="@color/white"
-        android:background="@color/buttonGray"
+        android:backgroundTint="@color/buttonGray"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -80,14 +82,15 @@
         app:layout_constraintVertical_bias=".6"
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/passwordChange"
+        app:cornerRadius="32dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Change Password"
         android:textSize="25dp"
         android:textColor="@color/white"
-        android:background="@color/buttonGray"
+        android:backgroundTint="@color/buttonGray"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -95,14 +98,15 @@
         app:layout_constraintVertical_bias=".75"
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/logout"
+        app:cornerRadius="32dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Logout"
         android:textSize="30dp"
         android:textColor="@color/white"
-        android:background="@color/buttonGray"
+        android:backgroundTint="@color/buttonGray"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

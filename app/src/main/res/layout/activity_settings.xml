@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Settings"
-    android:background="@color/offRed">
+    android:background="@color/red">
 
     <!--TODO menu-->
     <TextView
@@ -66,14 +66,15 @@
 
     <!--TODO drop down options-->
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/account"
+        app:cornerRadius="132dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Account Settings"
         android:textSize="30dp"
         android:textColor="@color/white"
-        android:background="@color/buttonGray"
+        android:backgroundTint="@color/buttonGray"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"

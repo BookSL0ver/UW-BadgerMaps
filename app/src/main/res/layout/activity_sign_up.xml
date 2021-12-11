@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignUpActivity"
-    android:background="@color/offRed">
+    android:background="@color/red">
 
     #TODO white curved edges
     #TODO image
@@ -107,14 +107,15 @@
         app:layout_constraintHorizontal_bias="1"
         android:onClick="seePasswordConfirm"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/login"
+        app:cornerRadius="32dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SIGN UP"
         android:textColor="@color/white"
         android:textSize="20dp"
-        android:background="@color/buttonGray"
+        android:backgroundTint="@color/buttonGray"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"

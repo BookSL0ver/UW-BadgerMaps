@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Resources">
+    tools:context=".Resources"
+
+    android:background="@color/red">
 
     <!--TODO menu-->
 
@@ -23,14 +25,15 @@
         />
 
     <!--TODO button picture-->
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/safeWalkButton"
+        app:cornerRadius="24dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:text="Safe Walk"
         android:textColor="@color/black"
         android:textSize="20dp"
-        android:background="@color/white"
+        android:backgroundTint="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,14 +44,15 @@
         />
 
     <!--TODO button picture-->
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/uhsButton"
+        app:cornerRadius="24dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:text="UHS"
         android:textColor="@color/black"
         android:textSize="20dp"
-        android:background="@color/white"
+        android:backgroundTint="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,14 +63,15 @@
         />
 
     <!--TODO button picture-->
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/librariesButton"
+        app:cornerRadius="24dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:text="Libraries"
         android:textColor="@color/black"
         android:textSize="20dp"
-        android:background="@color/white"
+        android:backgroundTint="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -77,14 +82,15 @@
         />
 
     <!--TODO button picture-->
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/techHelpButton"
+        app:cornerRadius="24dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:text="Tech Help"
         android:textColor="@color/black"
         android:textSize="20dp"
-        android:background="@color/white"
+        android:backgroundTint="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -95,14 +101,15 @@
         />
 
     <!--TODO button picture-->
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/employmentButton"
+        app:cornerRadius="24dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:text="Employment"
         android:textColor="@color/black"
         android:textSize="20dp"
-        android:background="@color/white"
+        android:backgroundTint="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

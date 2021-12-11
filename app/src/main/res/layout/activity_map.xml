@@ -20,11 +20,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/filters"
+        app:cornerRadius="32dp"
         android:layout_width="72dp"
         android:layout_height="42dp"
-        android:background="@color/offRed"
+        android:backgroundTint="@color/offRed"
         android:onClick="filters"
         android:text="Filter"
         android:textColor="@color/white"

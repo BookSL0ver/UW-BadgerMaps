@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FF0000</color>
     <color name="offRed">#D75959</color>
-    <color name="buttonGray">#FF666464</color>
+    <color name="buttonGray">#FF6D6D64</color>
     <color name="clear">#00FFFFFF</color>
     <color name="lightGray">#FF888686</color>
 </resources>
