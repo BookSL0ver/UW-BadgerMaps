@@ -50,7 +50,7 @@
         app:layout_constraintHorizontal_bias=".2"
         />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/favorites"
         app:cornerRadius="32dp"
         android:layout_width="300dp"
@@ -64,9 +64,10 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintVertical_bias=".5"
+        android:onClick="favoritesClick"
         />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/importSchedule"
         app:cornerRadius="32dp"
         android:layout_width="300dp"
@@ -80,9 +81,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias=".6"
+        android:onClick="importClick"
         />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/passwordChange"
         app:cornerRadius="32dp"
         android:layout_width="300dp"
@@ -96,9 +98,10 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintVertical_bias=".75"
+        android:onClick="passChange"
         />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/logout"
         app:cornerRadius="32dp"
         android:layout_width="wrap_content"
@@ -112,6 +115,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias=".95"
+        android:onClick="logout"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

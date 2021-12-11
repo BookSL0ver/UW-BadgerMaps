@@ -66,7 +66,41 @@
 
     <!--TODO drop down options-->
 
-    <com.google.android.material.button.MaterialButton
+    <Button
+        android:id="@+id/SignUpButton"
+        app:cornerRadius="32dp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="Sign Up"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:backgroundTint="@color/buttonGray"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias=".7"
+        android:onClick="signUpClick"
+        />
+
+    <Button
+        android:id="@+id/SignInButton"
+        app:cornerRadius="32dp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="Sign In"
+        android:backgroundTint="@color/buttonGray"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias=".76"
+        android:onClick="signInClick"
+        />
+
+    <Button
         android:id="@+id/account"
         app:cornerRadius="132dp"
         android:layout_width="wrap_content"
@@ -79,7 +113,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias=".75"
+        app:layout_constraintVertical_bias=".92"
+        android:onClick="accountClick"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

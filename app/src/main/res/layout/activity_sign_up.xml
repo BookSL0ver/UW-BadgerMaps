@@ -107,7 +107,7 @@
         app:layout_constraintHorizontal_bias="1"
         android:onClick="seePasswordConfirm"/>
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/login"
         app:cornerRadius="32dp"
         android:layout_width="wrap_content"

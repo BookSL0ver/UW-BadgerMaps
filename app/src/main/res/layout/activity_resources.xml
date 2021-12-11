@@ -21,11 +21,11 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias=".2"
+        app:layout_constraintVertical_bias=".1"
         />
 
     <!--TODO button picture-->
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/safeWalkButton"
         app:cornerRadius="24dp"
         android:layout_width="150dp"
@@ -38,13 +38,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias=".15"
-        app:layout_constraintVertical_bias=".4"
+        app:layout_constraintHorizontal_bias=".125"
+        app:layout_constraintVertical_bias=".3"
         android:onClick="safeWalkClick"
         />
 
     <!--TODO button picture-->
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/uhsButton"
         app:cornerRadius="24dp"
         android:layout_width="150dp"
@@ -57,13 +57,13 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias=".85"
-        app:layout_constraintVertical_bias=".4"
+        app:layout_constraintHorizontal_bias=".875"
+        app:layout_constraintVertical_bias=".3"
         android:onClick="uhsClick"
         />
 
     <!--TODO button picture-->
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/librariesButton"
         app:cornerRadius="24dp"
         android:layout_width="150dp"
@@ -76,13 +76,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias=".15"
-        app:layout_constraintVertical_bias=".7"
+        app:layout_constraintHorizontal_bias=".125"
+        app:layout_constraintVertical_bias=".65"
         android:onClick="librariesClick"
         />
 
     <!--TODO button picture-->
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/techHelpButton"
         app:cornerRadius="24dp"
         android:layout_width="150dp"
@@ -95,13 +95,13 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias=".85"
-        app:layout_constraintVertical_bias=".7"
+        app:layout_constraintHorizontal_bias=".875"
+        app:layout_constraintVertical_bias=".65"
         android:onClick="techHelpClick"
         />
 
     <!--TODO button picture-->
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/employmentButton"
         app:cornerRadius="24dp"
         android:layout_width="150dp"

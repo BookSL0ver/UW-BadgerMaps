@@ -12,7 +12,7 @@ public class SafeWalkPopUp extends AppCompatDialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Safe Walk")
-                .setMessage("TEXT HERE")
+                .setMessage("If a student feels unsafe walking alone, they can call SafeWalk and two people will come to walk with the student to their desired location: https://transportation.wisc.edu/safewalk/")
                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

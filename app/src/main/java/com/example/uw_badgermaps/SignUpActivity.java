@@ -15,7 +15,7 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     public void backButton(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
 
