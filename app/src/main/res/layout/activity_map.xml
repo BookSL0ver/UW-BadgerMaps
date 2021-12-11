@@ -47,7 +47,7 @@
         -->
 
     <SearchView
-        android:id="@+id/searchText"
+        android:id="@+id/svLocation"
         android:layout_width="322dp"
         android:layout_height="41dp"
         android:layout_marginStart="6dp"
