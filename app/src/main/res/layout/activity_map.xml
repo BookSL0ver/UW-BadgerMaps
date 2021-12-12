@@ -36,7 +36,7 @@
 
     <SearchView
         android:id="@+id/svLocation"
-        android:layout_width="200dp"
+        android:layout_width="190dp"
         android:layout_height="42dp"
         android:layout_marginStart="5dp"
         android:background="@color/white"
@@ -45,6 +45,19 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/filters" />
+
+    <Button
+        android:id="@+id/arrivedButton"
+        android:layout_width="75dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="5dp"
+        android:text="Arrived!"
+        android:textSize="15dp"
+        android:textColor="@color/lightGray"
+        android:background="@color/white"
+        android:onClick="arrived"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/svLocation" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
