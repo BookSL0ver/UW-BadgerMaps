@@ -6,6 +6,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -104,7 +105,8 @@ public class MapActivity extends FragmentActivity {
     }
 
     public void filters(View view) {
-        //TODO
+        Intent intent = new Intent(getApplicationContext(), FilterActivity.class);
+        startActivity(intent);
     }
 
     public void search(View view) {

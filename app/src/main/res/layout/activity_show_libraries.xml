@@ -5,12 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:actionBarNavMode="tabs"
-    tools:context=".MapActivity"
+    tools:context=".ShowLibraries"
     tools:ignore="ExtraText">
 
-    <!--
-    #TODO menu at top left
-    -->
 
     <fragment
         android:id="@+id/fragmentMap"
@@ -26,7 +23,7 @@
         android:layout_height="42dp"
         android:backgroundTint="@color/offRed"
         android:onClick="filters"
-        android:text="FILTER"
+        android:text="Filter"
         android:textColor="@color/white"
         android:textSize="15dp"
         app:cornerRadius="32dp"
@@ -38,7 +35,6 @@
         android:id="@+id/svLocation"
         android:layout_width="200dp"
         android:layout_height="42dp"
-        android:layout_marginStart="5dp"
         android:background="@color/white"
         android:queryHint="Search..."
         android:textColor="@color/lightGray"

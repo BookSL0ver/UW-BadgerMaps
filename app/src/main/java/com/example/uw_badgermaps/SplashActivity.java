@@ -22,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
         h.postDelayed(new Runnable(){
             @Override
             public void run() {
-                Intent i = new Intent(SplashActivity.this, Resources.class);
+                Intent i = new Intent(SplashActivity.this, MapActivity.class);
                 startActivity(i);
                 finish();
             }

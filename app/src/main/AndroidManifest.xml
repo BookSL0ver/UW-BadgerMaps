@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UWBadgerMaps">
         <activity
+            android:name=".FilterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShowLibraries"
+            android:exported="false" />
+        <activity
             android:name=".Favorites"
             android:exported="false" />
         <activity
