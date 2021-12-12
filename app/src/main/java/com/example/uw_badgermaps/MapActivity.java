@@ -121,7 +121,7 @@ public class MapActivity extends FragmentActivity {
                             String roomStr = roomText.getText().toString();
                             //Toast.makeText(MapActivity.this, roomStr, Toast.LENGTH_LONG).show();
                             int room = Integer.parseInt(roomStr);
-                            if ((room > 100) || (room < 4500)) {
+                            if ((room > 100) & (room < 4500)) {
                                 room = room / 1000;
                                 if (room == 0) {
                                     //show basement
@@ -140,10 +140,10 @@ public class MapActivity extends FragmentActivity {
                                     Toast.makeText(MapActivity.this, "SHOULD NOT BE HERE", Toast.LENGTH_LONG).show();
                                 }
                             } else { //room number entered does not exist
-                                Toast.makeText(MapActivity.this, "Please enter valid room number1", Toast.LENGTH_LONG).show();
+                                Toast.makeText(MapActivity.this, "Room number entered does not exist", Toast.LENGTH_LONG).show();
                             }
                         } catch (NumberFormatException e) { //room number is null
-                            Toast.makeText(MapActivity.this, "Please enter valid room number2", Toast.LENGTH_LONG).show();
+                            Toast.makeText(MapActivity.this, "Please enter valid room number", Toast.LENGTH_LONG).show();
                         }
 
                 }
