@@ -24,4 +24,9 @@ public class FilterActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void showUnions(View view){
+        Intent intent = new Intent(getApplicationContext(), ShowUnions.class);
+        startActivity(intent);
+    }
+
 }

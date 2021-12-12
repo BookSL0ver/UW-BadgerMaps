@@ -1,5 +1,7 @@
 package com.example.uw_badgermaps;
 
+import static java.sql.DriverManager.println;
+
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
@@ -149,6 +151,7 @@ public class ShowLibraries extends FragmentActivity {
     }
 
     public void filters(View view) {
+        mMap.clear();
         Intent intent = new Intent(getApplicationContext(), FilterActivity.class);
         startActivity(intent);
     }
