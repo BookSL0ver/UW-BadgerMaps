@@ -15,12 +15,12 @@ public class Settings extends AppCompatActivity {
     }
 
     public void signUpClick(View view) {
-        Intent intent = new Intent(this, SignInActivity.class);
+        Intent intent = new Intent(this, SignUpActivity.class);
         startActivity(intent);
     }
 
     public void signInClick(View view) {
-        Intent intent = new Intent(this, SignUpActivity.class);
+        Intent intent = new Intent(this, SignInActivity.class);
         startActivity(intent);
     }
 
