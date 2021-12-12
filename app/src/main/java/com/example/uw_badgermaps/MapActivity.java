@@ -7,12 +7,17 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -199,7 +204,28 @@ public class MapActivity extends FragmentActivity {
         startActivity(intent);
     }
 
-    public void search(View view) {
-        //TODO
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
     }
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.home:
+                //ToDo
+                return true;
+            case R.id.resources:
+                Intent intentR = new Intent(this, Resources.class);
+                startActivity(intentR);
+                return true;
+            case R.id.settings:
+                Intent intentS = new Intent(this, Settings.class);
+                startActivity(intentS);
+                return true;
+
+        }
+        return true;
+    }
+
 }
