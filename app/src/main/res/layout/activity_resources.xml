@@ -27,6 +27,8 @@
     <!--TODO button picture-->
     <Button
         android:id="@+id/safeWalkButton"
+        android:drawableTop="@drawable/safe_walk"
+        android:drawablePadding="30dp"
         app:cornerRadius="24dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -46,6 +48,8 @@
     <!--TODO button picture-->
     <Button
         android:id="@+id/uhsButton"
+        android:drawableTop="@drawable/uhs"
+        android:drawablePadding="30dp"
         app:cornerRadius="24dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -65,6 +69,8 @@
     <!--TODO button picture-->
     <Button
         android:id="@+id/librariesButton"
+        android:drawableTop="@drawable/libraries"
+        android:drawablePadding="30dp"
         app:cornerRadius="24dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -84,6 +90,8 @@
     <!--TODO button picture-->
     <Button
         android:id="@+id/techHelpButton"
+        android:drawableTop="@drawable/tech_help"
+        android:drawablePadding="30dp"
         app:cornerRadius="24dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -103,12 +111,14 @@
     <!--TODO button picture-->
     <Button
         android:id="@+id/employmentButton"
+        android:drawableTop="@drawable/employment"
+        android:drawablePadding="30dp"
         app:cornerRadius="24dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:text="Employment"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:backgroundTint="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
