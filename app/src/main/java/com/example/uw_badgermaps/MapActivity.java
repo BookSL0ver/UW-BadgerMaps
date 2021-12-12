@@ -50,6 +50,7 @@ public class MapActivity extends FragmentActivity {
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         mapFragment.getMapAsync(googleMap -> {
             mMap = googleMap;
+            latLng = new LatLng(0, 0);
             //zoom into campus
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mDestinationLatLng, 17));
             displayMyLocation();
@@ -57,6 +58,8 @@ public class MapActivity extends FragmentActivity {
             searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                 @Override
                 public boolean onQueryTextSubmit(String query) {
+                    mMap.clear();
+                    displayMyLocation();
                     String location = searchView.getQuery().toString();
                     List<Address> addressList = null;
 

@@ -2,6 +2,7 @@ package com.example.uw_badgermaps;
 
 import static java.sql.DriverManager.println;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
@@ -9,7 +10,10 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -31,9 +35,11 @@ public class ShowLibraries extends FragmentActivity {
     private FusedLocationProviderClient mFusedLocationProviderClient;
     private LatLng mLocationLatLng;
     private GoogleMap mMap;
+    private LatLng latLng;
     //set to campus area for map zoom
     private final LatLng mDestinationLatLng = new LatLng(43.0720, -89.4076);
     SearchView searchView;
+    private Dialog dialog;
 
     private final LatLng AMP = new LatLng(43.07385791628417, -89.4054720306079);
     private final LatLng ARL = new LatLng(43.03963075279178, -89.44357490398728);
@@ -70,6 +76,7 @@ public class ShowLibraries extends FragmentActivity {
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         mapFragment.getMapAsync(googleMap -> {
             mMap = googleMap;
+            latLng = new LatLng(0, 0);
             //zoom into campus
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mDestinationLatLng,17));
             displayMyLocation();
@@ -89,7 +96,7 @@ public class ShowLibraries extends FragmentActivity {
                             e.printStackTrace();
                         }
                         Address address = addressList.get(0);
-                        LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
+                        latLng = new LatLng(address.getLatitude(), address.getLongitude());
                         mMap.addMarker(new MarkerOptions().position(latLng).title(location));
                         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 18));
 
@@ -155,5 +162,63 @@ public class ShowLibraries extends FragmentActivity {
         Intent intent = new Intent(getApplicationContext(), FilterActivity.class);
         startActivity(intent);
     }
+
+    public void arrived(View view) {
+        if (((latLng.latitude - 43.07145285968377 < 0.00035) & (latLng.latitude - 43.07145285968377 > -0.00035)) & ((latLng.longitude - -89.40668315134191 < 0.00035) & (latLng.longitude - -89.40668315134191 > -0.00035))) {
+            dialog = new Dialog(this);
+            dialog.setContentView(R.layout.popup_dialog);
+
+            Button close = dialog.findViewById(R.id.button2);
+            close.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    dialog.dismiss();
+                }
+            });
+            Button getFloor = dialog.findViewById(R.id.button);
+            getFloor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //get image of correct floor
+                    //checks if location is near valid building with maps added
+                    try { //check for bad input
+                        EditText roomText = dialog.findViewById(R.id.roomNumber);
+                        String roomStr = roomText.getText().toString();
+                        //Toast.makeText(MapActivity.this, roomStr, Toast.LENGTH_LONG).show();
+                        int room = Integer.parseInt(roomStr);
+                        if ((room > 100) & (room < 4500)) {
+                            room = room / 1000;
+                            if (room == 0) {
+                                //show basement
+                            } else if (room == 1) {
+                                //show 1st floor
+                                Toast.makeText(ShowLibraries.this, "1st Floor", Toast.LENGTH_LONG).show();
+                            } else if (room == 2) {
+                                //show 2nd floor
+                                Toast.makeText(ShowLibraries.this, "2nd Floor", Toast.LENGTH_LONG).show();
+                            } else if (room == 3) {
+                                //show 3rd floor
+                            } else if (room == 4) {
+                                //show 4th floor
+                            } else {
+                                //SHOULD NOT BE HERE
+                                Toast.makeText(ShowLibraries.this, "SHOULD NOT BE HERE", Toast.LENGTH_LONG).show();
+                            }
+                        } else { //room number entered does not exist
+                            Toast.makeText(ShowLibraries.this, "Room number entered does not exist", Toast.LENGTH_LONG).show();
+                        }
+                    } catch (NumberFormatException e) { //room number is null
+                        Toast.makeText(ShowLibraries.this, "Please enter valid room number", Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            });
+            dialog.show();
+        }else { //location is not near building with uploaded maps
+            Toast.makeText(ShowLibraries.this, "No building maps found for selection", Toast.LENGTH_LONG).show();
+        }
+    }
+
+
 
 }
