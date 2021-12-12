@@ -23,6 +23,9 @@
             android:name=".ShowUnions"
             android:exported="false" />
         <activity
+            android:name=".ShowGyms"
+            android:exported="false" />
+        <activity
             android:name=".Favorites"
             android:exported="false" />
         <activity

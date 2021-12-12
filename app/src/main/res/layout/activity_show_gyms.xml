@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:actionBarNavMode="tabs"
+    tools:context=".ShowGyms"
+    tools:ignore="ExtraText">
+
+
+    <fragment
+        android:id="@+id/fragmentMap"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="411dp"
+        android:layout_height="731dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/filters"
+        android:layout_width="90dp"
+        android:layout_height="42dp"
+        android:backgroundTint="@color/offRed"
+        android:onClick="filters"
+        android:text="Filter"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:cornerRadius="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <SearchView
+        android:id="@+id/svLocation"
+        android:layout_width="200dp"
+        android:layout_height="42dp"
+        android:background="@color/white"
+        android:queryHint="Search..."
+        android:textColor="@color/lightGray"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/filters" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

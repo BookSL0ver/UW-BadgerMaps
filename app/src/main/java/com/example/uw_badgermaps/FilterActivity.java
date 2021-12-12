@@ -29,4 +29,9 @@ public class FilterActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void showGyms(View view){
+        Intent intent = new Intent(getApplicationContext(), ShowGyms.class);
+        startActivity(intent);
+    }
+
 }
