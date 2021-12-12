@@ -26,6 +26,9 @@
             android:name=".ShowGyms"
             android:exported="false" />
         <activity
+            android:name=".ShowDiningHalls"
+            android:exported="false" />
+        <activity
             android:name=".Favorites"
             android:exported="false" />
         <activity

@@ -34,4 +34,9 @@ public class FilterActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void showDiningHalls(View view){
+        Intent intent = new Intent(getApplicationContext(), ShowDiningHalls.class);
+        startActivity(intent);
+    }
+
 }
