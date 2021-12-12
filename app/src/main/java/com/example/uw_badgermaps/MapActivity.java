@@ -15,7 +15,9 @@ import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -96,32 +98,62 @@ public class MapActivity extends FragmentActivity {
 
     }
 
-    public void arrived(View view){
+    public void arrived(View view) {
+        if (((latLng.latitude - 43.07145285968377 < 0.00035) & (latLng.latitude - 43.07145285968377 > -0.00035)) & ((latLng.longitude - -89.40668315134191 < 0.00035) & (latLng.longitude - -89.40668315134191 > -0.00035))) {
+            dialog = new Dialog(this);
+            dialog.setContentView(R.layout.popup_dialog);
 
-       dialog = new Dialog(this);
-       dialog.setContentView(R.layout.popup_dialog);
+            Button close = dialog.findViewById(R.id.button2);
+            close.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    dialog.dismiss();
+                }
+            });
+            Button getFloor = dialog.findViewById(R.id.button);
+            getFloor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //get image of correct floor
+                    //checks if location is near valid building with maps added
+                        try { //check for bad input
+                            EditText roomText = dialog.findViewById(R.id.roomNumber);
+                            String roomStr = roomText.getText().toString();
+                            //Toast.makeText(MapActivity.this, roomStr, Toast.LENGTH_LONG).show();
+                            int room = Integer.parseInt(roomStr);
+                            if ((room > 100) || (room < 4500)) {
+                                room = room / 1000;
+                                if (room == 0) {
+                                    //show basement
+                                } else if (room == 1) {
+                                    //show 1st floor
+                                    Toast.makeText(MapActivity.this, "1st Floor", Toast.LENGTH_LONG).show();
+                                } else if (room == 2) {
+                                    //show 2nd floor
+                                    Toast.makeText(MapActivity.this, "2nd Floor", Toast.LENGTH_LONG).show();
+                                } else if (room == 3) {
+                                    //show 3rd floor
+                                } else if (room == 4) {
+                                    //show 4th floor
+                                } else {
+                                    //SHOULD NOT BE HERE
+                                    Toast.makeText(MapActivity.this, "SHOULD NOT BE HERE", Toast.LENGTH_LONG).show();
+                                }
+                            } else { //room number entered does not exist
+                                Toast.makeText(MapActivity.this, "Please enter valid room number1", Toast.LENGTH_LONG).show();
+                            }
+                        } catch (NumberFormatException e) { //room number is null
+                            Toast.makeText(MapActivity.this, "Please enter valid room number2", Toast.LENGTH_LONG).show();
+                        }
 
-        Button close = dialog.findViewById(R.id.button2);
-        close.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialog.dismiss();
-            }
-        });
-        Button getFloor = dialog.findViewById(R.id.button);
-        close.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //get image of correct floor
-            }
-        });
-       dialog.show();
+                }
+            });
+            dialog.show();
+        }else { //location is not near building with uploaded maps
+            Toast.makeText(MapActivity.this, "No building maps found for selection", Toast.LENGTH_LONG).show();
+        }
     }
 
-
-    public void closePopup(){
-        dialog.dismiss();
-    }
 
     /**
     public boolean checkGoal(LatLng curLocation, LatLng destination){
