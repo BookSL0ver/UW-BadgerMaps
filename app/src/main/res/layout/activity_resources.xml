@@ -110,7 +110,7 @@
     <!--TODO button picture-->
     <Button
         android:id="@+id/employmentButton"
-        android:layout_width="145dp"
+        android:layout_width="150dp"
         android:layout_height="140dp"
         android:backgroundTint="@color/mainText"
         android:drawableTop="@drawable/employment"
