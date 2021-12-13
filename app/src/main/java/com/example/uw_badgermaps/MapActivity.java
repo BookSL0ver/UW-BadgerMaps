@@ -2,6 +2,7 @@ package com.example.uw_badgermaps;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
@@ -45,7 +46,6 @@ public class MapActivity extends FragmentActivity {
     SearchView searchView;
     private LatLng latLng;
     private Dialog dialog;
-    private Dialog first;
 
 
     @Override
@@ -91,6 +91,8 @@ public class MapActivity extends FragmentActivity {
                 }
             });
         });
+
+
         delayLoop();
     }
 
@@ -110,7 +112,6 @@ public class MapActivity extends FragmentActivity {
     public void arrived(View view) {
         if (((latLng.latitude - 43.07145285968377 < 0.00035) & (latLng.latitude - 43.07145285968377 > -0.00035)) & ((latLng.longitude - -89.40668315134191 < 0.00035) & (latLng.longitude - -89.40668315134191 > -0.00035))) {
             dialog = new Dialog(this);
-            first = new Dialog(this);
             dialog.setContentView(R.layout.popup_dialog);
 
             Button close = dialog.findViewById(R.id.button2);

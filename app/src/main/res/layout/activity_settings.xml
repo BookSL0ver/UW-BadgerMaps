@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Settings"
-    android:background="#f14b2c">
+    android:background="@color/mainBackground"
+    tools:context=".Settings">
 
     <!--TODO menu-->
     <TextView
@@ -13,69 +13,68 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Settings"
+        android:textColor="@color/mainText"
         android:textSize="50dp"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias=".2"
-        />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".2" />
 
     <TextView
         android:id="@+id/darkMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enable dark mode"
+        android:textColor="@color/mainText"
         android:textSize="30dp"
-        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias=".2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".4"
-        app:layout_constraintHorizontal_bias=".2"
-        />
+        app:layout_constraintVertical_bias=".4" />
 
     <ToggleButton
         android:id="@+id/darkModeSwitch"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/lightGray"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias=".9"
-        app:layout_constraintVertical_bias=".4"
         android:onClick="toggle"
-        />
+        android:textColor="@color/mainText"
+        android:textColorHighlight="@color/btnDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias=".9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".4" />
 
     <TextView
         android:id="@+id/gpsPrecision"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="GPS Precision"
+        android:textColor="@color/mainText"
         android:textSize="15dp"
-        android:textColor="@color/white"
-        app:layout_constraintLeft_toLeftOf="@id/gpsPrecSelect"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/gpsPrecSelect"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".5"
-        />
+        app:layout_constraintVertical_bias=".5" />
 
     <Spinner
         android:id="@+id/gpsPrecSelect"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/searchBar"
+        android:dropDownSelector="@color/searchBar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias=".55"
-        android:background="@color/white"
-        />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".55" />
+
+    <!--
 
     <Button
         android:id="@+id/SignUpButton"
@@ -127,5 +126,7 @@
         app:layout_constraintVertical_bias=".9"
         android:onClick="accountClick"
         />
+
+        -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
