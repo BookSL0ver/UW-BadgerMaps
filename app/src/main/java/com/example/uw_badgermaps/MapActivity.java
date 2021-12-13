@@ -127,12 +127,14 @@ public class MapActivity extends FragmentActivity {
                         try { //check for bad input
                             EditText roomText = dialog.findViewById(R.id.roomNumber);
                             String roomStr = roomText.getText().toString();
+                            roomStr = roomStr.replaceAll("[^0-9]", "");
                             //Toast.makeText(MapActivity.this, roomStr, Toast.LENGTH_LONG).show();
                             int room = Integer.parseInt(roomStr);
                             if ((room > 100) & (room < 4500)) {
                                 room = room / 1000;
                                 if (room == 0) {
                                     //show basement
+                                    Toast.makeText(MapActivity.this, "Basement", Toast.LENGTH_LONG).show();
                                 } else if (room == 1) {
                                     //show 1st floor
                                     Toast.makeText(MapActivity.this, "1st Floor", Toast.LENGTH_LONG).show();
@@ -213,7 +215,8 @@ public class MapActivity extends FragmentActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.home:
-                //ToDo
+                Intent intentH = new Intent(this, MapActivity.class);
+                startActivity(intentH);
                 return true;
             case R.id.resources:
                 Intent intentR = new Intent(this, Resources.class);
