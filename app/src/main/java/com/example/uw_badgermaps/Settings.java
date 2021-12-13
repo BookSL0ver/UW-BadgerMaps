@@ -36,11 +36,9 @@ public class Settings extends AppCompatActivity {
 
     public void toggle(View view) {
         if(darkMode.isChecked()) { // Dark mode is on
-            dark = 1;
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         }
         else{ // Dark mode is off
-            dark = 0;
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
         }
     }
@@ -54,16 +52,43 @@ public class Settings extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.home:
+
+                darkMode = findViewById(R.id.darkModeSwitch);
+                if(darkMode.isChecked()) { // Dark mode is on
+                    dark = 1;
+                }
+                else{ // Dark mode is off
+                    dark = 0;
+                }
+
                 Intent intentH = new Intent(this, MapActivity.class);
                 intentH.putExtra("isDark", dark);
                 startActivity(intentH);
                 return true;
             case R.id.resources:
+
+                darkMode = findViewById(R.id.darkModeSwitch);
+                if(darkMode.isChecked()) { // Dark mode is on
+                    dark = 1;
+                }
+                else{ // Dark mode is off
+                    dark = 0;
+                }
+
                 Intent intentR = new Intent(this, Resources.class);
                 intentR.putExtra("isDark", dark);
                 startActivity(intentR);
                 return true;
             case R.id.settings:
+
+                darkMode = findViewById(R.id.darkModeSwitch);
+                if(darkMode.isChecked()) { // Dark mode is on
+                    dark = 1;
+                }
+                else{ // Dark mode is off
+                    dark = 0;
+                }
+
                 Intent intentS = new Intent(this, Settings.class);
                 intentS.putExtra("isDark", dark);
                 startActivity(intentS);

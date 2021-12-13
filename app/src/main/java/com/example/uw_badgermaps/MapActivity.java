@@ -92,9 +92,28 @@ public class MapActivity extends FragmentActivity {
             });
         });
 
+        Intent intent = getIntent();
+        int darkMode = intent.getIntExtra("isDark", -1);
+
+        if(darkMode > -1){
+            toggle(darkMode);
+        }
+
+
 
         delayLoop();
     }
+
+    public void toggle(int darkMode) {
+        if(darkMode == 1) { // Dark mode is on
+            Toast.makeText(MapActivity.this, "We here", Toast.LENGTH_LONG).show();
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+        else{ // Dark mode is off
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+        }
+    }
+
 
     //delay loop to update position
      public void delayLoop(){

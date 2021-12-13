@@ -2,6 +2,7 @@ package com.example.uw_badgermaps;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class Resources extends AppCompatActivity {
 
@@ -16,6 +18,21 @@ public class Resources extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resources);
+        Intent intent = getIntent();
+        int darkMode = intent.getIntExtra("isDark", -1);
+
+        if(darkMode > -1){
+            toggle(darkMode);
+        }
+    }
+
+    public void toggle(int darkMode) {
+        if(darkMode == 1) { // Dark mode is on
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+        else{ // Dark mode is off
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+        }
     }
 
     public void safeWalkClick(View view) {
