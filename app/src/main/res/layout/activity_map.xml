@@ -25,7 +25,7 @@
         android:backgroundTint="@color/btnLight"
         android:onClick="filters"
         android:text="FILTER"
-        android:textColor="@color/white"
+        android:textColor="@color/mainText"
         android:textSize="15dp"
         app:cornerRadius="32dp"
         app:layout_constraintBottom_toBottomOf="parent"

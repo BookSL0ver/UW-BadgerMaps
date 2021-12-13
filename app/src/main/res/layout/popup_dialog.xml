@@ -3,16 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/searchBar">
 
     <EditText
         android:id="@+id/roomNumber"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="176dp"
+        android:backgroundTint="@color/searchBar"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Enter Room Number"
+        android:textColor="@color/textAlt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,9 +26,9 @@
         android:layout_width="110dp"
         android:layout_height="50dp"
         android:layout_marginTop="26dp"
-        android:backgroundTint="@color/red"
+        android:backgroundTint="@color/mainBackground"
         android:text="Continue"
-        android:textColor="@color/white"
+        android:textColor="@color/mainText"
         app:layout_constraintStart_toStartOf="@+id/roomNumber"
         app:layout_constraintTop_toBottomOf="@+id/roomNumber" />
 
@@ -34,9 +37,9 @@
         android:layout_width="110dp"
         android:layout_height="50dp"
         android:layout_marginTop="26dp"
-        android:backgroundTint="@color/red"
+        android:backgroundTint="@color/mainBackground"
         android:text="Cancel"
-        android:textColor="@color/white"
+        android:textColor="@color/mainText"
         app:layout_constraintEnd_toEndOf="@+id/roomNumber"
         app:layout_constraintStart_toEndOf="@+id/button"
         app:layout_constraintTop_toBottomOf="@+id/roomNumber" />

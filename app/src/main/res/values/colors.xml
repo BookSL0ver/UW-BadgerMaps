@@ -13,7 +13,7 @@
     <color name="lightGray">#FF888686</color>
     
     <color name="mainText">#FFFFFF</color>
-    <color name="textAlt">#FF888686</color>
+    <color name="textAlt">#000000</color>
 
     <color name="btnDark">#FF888686</color>
     <color name="btnLight">#f14b2c</color>
