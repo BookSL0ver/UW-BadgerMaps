@@ -106,7 +106,6 @@ public class MapActivity extends FragmentActivity {
 
     public void toggle(int darkMode) {
         if(darkMode == 1) { // Dark mode is on
-            Toast.makeText(MapActivity.this, "We here", Toast.LENGTH_LONG).show();
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         }
         else{ // Dark mode is off
