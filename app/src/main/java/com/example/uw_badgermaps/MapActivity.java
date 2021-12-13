@@ -127,6 +127,7 @@ public class MapActivity extends FragmentActivity {
                         try { //check for bad input
                             EditText roomText = dialog.findViewById(R.id.roomNumber);
                             String roomStr = roomText.getText().toString();
+                            roomStr = roomStr.replaceAll("[^0-9]", "");
                             //Toast.makeText(MapActivity.this, roomStr, Toast.LENGTH_LONG).show();
                             int room = Integer.parseInt(roomStr);
                             if ((room > 100) & (room < 4500)) {
