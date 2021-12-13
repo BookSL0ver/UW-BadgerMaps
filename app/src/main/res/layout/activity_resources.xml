@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Resources"
 
-    android:background="@color/red">
+    android:background="#f14b2c">
 
     <!--TODO menu-->
 
