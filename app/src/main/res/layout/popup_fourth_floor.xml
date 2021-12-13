@@ -9,7 +9,7 @@
         android:id="@+id/fourthFloorMap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/fourth_floor"
+        android:background="@drawable/fourth_floor_sideways"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
