@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Settings"
-    android:background="@color/red">
+    android:background="#f14b2c">
 
     <!--TODO menu-->
     <TextView
