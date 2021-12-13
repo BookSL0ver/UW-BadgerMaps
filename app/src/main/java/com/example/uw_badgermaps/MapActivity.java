@@ -45,6 +45,7 @@ public class MapActivity extends FragmentActivity {
     SearchView searchView;
     private LatLng latLng;
     private Dialog dialog;
+    private Dialog first;
 
 
     @Override
@@ -109,6 +110,7 @@ public class MapActivity extends FragmentActivity {
     public void arrived(View view) {
         if (((latLng.latitude - 43.07145285968377 < 0.00035) & (latLng.latitude - 43.07145285968377 > -0.00035)) & ((latLng.longitude - -89.40668315134191 < 0.00035) & (latLng.longitude - -89.40668315134191 > -0.00035))) {
             dialog = new Dialog(this);
+            first = new Dialog(this);
             dialog.setContentView(R.layout.popup_dialog);
 
             Button close = dialog.findViewById(R.id.button2);
@@ -138,6 +140,14 @@ public class MapActivity extends FragmentActivity {
                                 } else if (room == 1) {
                                     //show 1st floor
                                     Toast.makeText(MapActivity.this, "1st Floor", Toast.LENGTH_LONG).show();
+                                    dialog.setContentView(R.layout.popup_first_floor);
+                                    Button close = dialog.findViewById(R.id.closeButton);
+                                    close.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            dialog.dismiss();
+                                        }
+                                    });
                                 } else if (room == 2) {
                                     //show 2nd floor
                                     Toast.makeText(MapActivity.this, "2nd Floor", Toast.LENGTH_LONG).show();
@@ -145,6 +155,15 @@ public class MapActivity extends FragmentActivity {
                                     //show 3rd floor
                                 } else if (room == 4) {
                                     //show 4th floor
+                                    Toast.makeText(MapActivity.this, "4th Floor", Toast.LENGTH_LONG).show();
+                                    dialog.setContentView(R.layout.popup_fourth_floor);
+                                    Button close = dialog.findViewById(R.id.closeButton);
+                                    close.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            dialog.dismiss();
+                                        }
+                                    });
                                 } else {
                                     //SHOULD NOT BE HERE
                                     Toast.makeText(MapActivity.this, "SHOULD NOT BE HERE", Toast.LENGTH_LONG).show();
@@ -230,5 +249,10 @@ public class MapActivity extends FragmentActivity {
         }
         return true;
     }
+    public void back(View view){
+        Intent intent = new Intent(getApplicationContext(), MapActivity.class);
+        startActivity(intent);
+    }
+
 
 }
