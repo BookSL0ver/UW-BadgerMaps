@@ -14,7 +14,7 @@
         android:backgroundTint="@color/searchBar"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Enter Room Number"
+        android:hint="Enter Room Number"
         android:textColor="@color/textAlt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
