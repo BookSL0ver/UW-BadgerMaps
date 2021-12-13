@@ -133,6 +133,7 @@ public class MapActivity extends FragmentActivity {
                                 room = room / 1000;
                                 if (room == 0) {
                                     //show basement
+                                    Toast.makeText(MapActivity.this, "Basement", Toast.LENGTH_LONG).show();
                                 } else if (room == 1) {
                                     //show 1st floor
                                     Toast.makeText(MapActivity.this, "1st Floor", Toast.LENGTH_LONG).show();
@@ -213,7 +214,8 @@ public class MapActivity extends FragmentActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.home:
-                //ToDo
+                Intent intentH = new Intent(this, MapActivity.class);
+                startActivity(intentH);
                 return true;
             case R.id.resources:
                 Intent intentR = new Intent(this, Resources.class);
