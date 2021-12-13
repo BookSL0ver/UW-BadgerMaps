@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">UW-BadgerMaps</string>
+    <string-array name="gps_precision">
+        <item>High Accuracy</item>
+        <item>Battery Saving</item>
+        <item>GPS Only</item>
+    </string-array>
 </resources>
